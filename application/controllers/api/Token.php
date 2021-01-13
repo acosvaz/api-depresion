@@ -48,7 +48,7 @@ public function registro_post()
         $_POST = json_decode($this->security->xss_clean(file_get_contents("php://input")), true);
         
         $input = $this->input->post();
-        $this->db->insert('usuarios',$input);
+        $this->db->insert('usuarios', $input);
      
         $this->response(['Usuario creado'], REST_Controller::HTTP_OK);
     } 
